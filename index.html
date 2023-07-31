@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIT-AP University - Infrastructure</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="logo">
+          <h1>VIT-AP University</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Infrastructure</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-content">
+        <h2>Welcome to VIT-AP University</h2>
+        <p>
+          VIT-AP University is a premier educational institution known for its
+          academic excellence and state-of-the-art infrastructure. With a strong
+          focus on research, innovation, and holistic development, VIT-AP offers
+          a wide range of programs to nurture future leaders.
+        </p>
+        <a href="#highlights" class="btn">Explore Highlights</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <marquee behavior="" direction="right-left"></marquee>
+          <h2>Discover Excellence</h2>
+          <p>
+            Join VIT-AP University for a transformative learning experience.
+          </p>
+          <a href="#" class="btn">Apply Now</a>
+        </div>
+      </section>
+
+      <section class="infrastructure" id="infrastructure">
+        <h2>Click the below links to view infrastructure</h2>
+        <ul>
+          <li><a href="lab.html">Laboratories</a></li>
+          <li><a href="lib.html">Libraries</a></li>
+          <li><a href="class.html">Classrooms</a></li>
+          <li><a href="hstl.html">Hostels</a></li>
+          <li><a href="sport.html">Sports Facilities</a></li>
+        </ul>
+      </section>
+
+      <section class="highlights" id="highlights">
+        <h2>Highlights</h2>
+        <ul>
+          <li>Top-ranked University</li>
+          <li>World-class Faculty</li>
+          <li>Industry Collaborations</li>
+          <li>State-of-the-art Research Centers</li>
+          <li>Modern Campus Infrastructure</li>
+          <li>Placements in Leading Companies</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 VIT-AP University. All rights reserved.</p>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/vitap.university/" target="_blank"
+              ><span class="icon" aria-hidden="true">&#xf09a;</span></a
+            ><!-- Facebook icon -->
+          </li>
+          <li>
+            <alive-s
+              href="https://twitter.com/VITAPuniversity?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              target="_blank"
+              ><span class="icon" aria-hidden="true">&#xf099;</span></a
+            ><!-- Twitter icon -->
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/vitap.university/?hl=en"
+              target="_blank"
+              ><span class="icon" aria-hidden="true">&#xf16d;</span></a
+            ><!-- Instagram icon -->
+          </li>
+          <li>
+            <a href="#" target="_blank"
+              ><span class="icon" aria-hidden="true">&#xf08c;</span></a
+            ><!-- LinkedIn icon -->
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+  <script>
+    // Hero Section Animation
+    gsap.from(".header-content", { opacity: 0, y: 100, duration: 1 });
+
+    // Infrastructure Section Animation
+    gsap.from(".infrastructure", { opacity: 0, y: 100, duration: 1 });
+
+    // Highlights Section Animation
+    gsap.from(".highlights", { opacity: 0, y: 100, duration: 1 });
+
+    // Discover Excellence Animation
+    const discoverText = document.querySelector(".discover");
+    const applyBtn = document.querySelector(".apply-btn");
+    const heroSection = document.querySelector(".hero");
+
+    const hoverAnimation = gsap.timeline({ paused: true });
+    hoverAnimation
+      .to(discoverText, { scale: 1.2, rotation: 5, duration: 0.5 })
+      .to(
+        applyBtn,
+        {
+          scale: 1.2,
+          backgroundColor: "maroon",
+          color: "white",
+          duration: 0.5,
+        },
+        "-=0.5"
+      );
+
+    const bounceAnimation = gsap.timeline({
+      paused: true,
+      repeat: -1,
+      yoyo: true,
+    });
+    // bounceAnimation
+    //   .to(heroSection, { y: -5, duration: 0.5 })
+    //   .to(heroSection, { y: 0, duration: 0.5 });
+
+    // heroSection.addEventListener("mouseenter", () => {
+    //   hoverAnimation.play();
+    //   bounceAnimation.play();
+    // });
+
+    // heroSection.addEventListener("mouseleave", () => {
+    //   hoverAnimation.reverse();
+    //   bounceAnimation.pause(0);
+    // });
+  </script>
+</html>
