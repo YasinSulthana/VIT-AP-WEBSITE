@@ -97,7 +97,7 @@ nav {
 
 .hero {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.58), black),
-    url("https://vitap.ac.in/wp-content/uploads/2021/07/Areal-View-Campus.jpeg);
+    url("https://vitap.ac.in/wp-content/uploads/2021/07/Areal-View-Campus.jpeg");
   background-size: cover;
   height: 600px;
   display: flex;
